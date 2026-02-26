@@ -1,0 +1,7 @@
+-- Placeholder: initial exploration queries will be added here
+
+-- Example: count leads by country
+-- SELECT country, COUNT(*) AS leads
+-- FROM leads
+-- GROUP BY country
+-- ORDER BY leads DESC;
