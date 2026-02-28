@@ -102,3 +102,14 @@ Reproducible rule-based analytical modeling
 Transparent classification framework
 
 The project therefore moves beyond scoring and offers a transparent, rule-based diagnostic framework for institutional AI readiness.
+
+## How to Run
+
+1. Install dependencies:
+   pip install -r requirements.txt
+
+2. Run truth table:
+   python src/truth_table.py
+
+3. Run counterfactual analysis:
+   python src/counterfactuals.py
