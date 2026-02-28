@@ -4,35 +4,43 @@ Overview
 
 This repository presents a rule-based institutional model designed to explain when national-level AI programs reach strategic commitment.
 
-The framework formalizes institutional conditions observed in real-world B2G engagements and translates them into a transparent, reproducible analytical model implemented in Python.
+The framework formalizes institutional conditions frequently observed in public-sector AI initiatives and translates them into a transparent, reproducible analytical model implemented in Python.
 
-The focus is institutional feasibility rather than market demand.
+The focus is institutional feasibility rather than market demand or predictive modeling.
 
 Research Question
 
 What institutional conditions are necessary for a country to reach strategic commitment in national-level AI programs?
 
-Conceptual Logic
+Conceptual Framework
 
-The model follows a configurational rather than additive approach.
+The model follows a configurational logic rather than additive scoring.
 
-Strategic commitment is not treated as a cumulative score.
+Strategic commitment is not treated as a cumulative index.
 Instead, it emerges only when specific institutional conditions are jointly satisfied.
 
-Core assumptions:
+The framework operationalizes three core dimensions:
 
-Senior decision access determines whether AI discussions become strategic.
+SA (Senior Access) — direct access to senior decision-makers capable of strategic authorization
 
-A formal national AI strategy signals institutional seriousness.
+STR (Formal Strategy) — existence of a formal national AI strategy
 
-Execution capacity depends on both budget signals and absence of structural blocking constraints.
+EX (Execution Capacity) — ability to operationalize AI initiatives
+
+Execution capacity is derived from two observable signals:
+
+Budget_Signal — presence of an explicit funding or budget commitment
+
+Blocking_Constraint — presence of structural, governance, or institutional barriers
 
 Execution capacity is defined as:
 
 EX = 1 if Budget_Signal = 1 AND Blocking_Constraint = 0
 Otherwise EX = 0
 
-Predicted levels follow strict logical rules:
+Classification Logic
+
+The model applies strict necessary-condition reasoning:
 
 Level 1 → SA = 0
 
@@ -40,7 +48,24 @@ Level 2 → SA = 1 AND (STR = 0 OR EX = 0)
 
 Level 3 → SA = 1 AND STR = 1 AND EX = 1
 
-All theoretical assumptions are explicitly mapped to operational rules.
+This structure reflects conjunctural causality:
+absence of any required condition prevents the highest level of institutional commitment.
+
+Methodological Positioning
+
+This is not a predictive ML model and does not rely on regression or scoring techniques.
+
+Instead, it:
+
+Applies necessary-condition logic
+
+Uses transparent binary institutional signals
+
+Explicitly maps conceptual assumptions to operational rules
+
+Enables structural diagnostics rather than probabilistic prediction
+
+The approach is structurally closer to institutional analysis and QCA-style reasoning than to additive scoring models.
 
 Implementation
 
@@ -48,11 +73,11 @@ The repository includes:
 
 A full truth table covering all possible institutional configurations
 
-A classification script applying the rule-based model
+A classification script applying the rule-based logic
 
-A counterfactual analysis layer identifying binding constraints
+A counterfactual analysis module identifying binding constraints
 
-Reproducible outputs generated from structured CSV inputs
+Reproducible results generated from structured CSV inputs
 
 The logic is implemented in Python and can be applied to any dataset structured around the defined institutional variables.
 
@@ -60,7 +85,7 @@ Counterfactual Analysis
 
 Beyond static classification, the model includes a counterfactual layer to identify binding institutional constraints.
 
-For each country, the script evaluates:
+For each case, the framework evaluates:
 
 Baseline predicted level
 
@@ -70,25 +95,44 @@ Level if budget signals were activated
 
 Level if both constraints were resolved
 
-This allows the framework to distinguish between different structural bottlenecks:
+This allows identification of the specific bottleneck preventing advancement:
 
-Senior access constraint
-If SA = 0, no combination of budget or governance adjustments shifts the country beyond Level 1.
+Senior Access Constraint
+If SA = 0, no other institutional adjustments change the level.
 
-Budget constraint
-In some cases, removing governance friction does not change the level unless a formal budget signal is present.
+Budget Constraint
+Removing governance barriers does not shift commitment without explicit funding signals.
 
-Governance constraint
-Some countries reach Level 3 immediately once blocking institutional constraints are removed.
+Governance Constraint
+In some systems, eliminating structural barriers immediately enables Level 3.
 
 This demonstrates that national AI commitment is conjunctural rather than additive.
-Strategic advancement requires the joint presence of institutional conditions, and progress depends on which specific constraint is binding.
+Strategic advancement requires joint institutional alignment.
 
 Repository Structure
-data/            Input datasets (anonymized examples)
-src/             Model scripts (truth table + counterfactual analysis)
-outputs/         Generated analytical outputs
-README.md        Project description
+data/      Example input dataset (anonymized)
+src/       Model scripts (classification, truth table, counterfactuals)
+outputs/   Generated analytical outputs (optional, excluded via .gitignore)
+README.md  Project documentation
+Data Note
+
+Data examples are simplified and anonymized for structural demonstration purposes.
+The model operates exclusively on abstract institutional indicators and does not rely on confidential or proprietary information.
+
+How to Run
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+Run the truth table:
+
+python src/truth_table.py
+
+Run counterfactual analysis:
+
+python src/counterfactuals.py
+
 Purpose
 
 This project demonstrates:
@@ -99,19 +143,6 @@ Clear operationalization of strategic conditions
 
 Reproducible rule-based analytical modeling
 
-Transparent classification framework
+Diagnostic identification of structural constraints
 
-The project therefore moves beyond scoring and offers a transparent, rule-based diagnostic framework for institutional AI readiness.
-
-Data examples are anonymized and provided for structural demonstration purposes.
-
-## How to Run
-
-1. Install dependencies:
-   pip install -r requirements.txt
-
-2. Run truth table:
-   python src/truth_table.py
-
-3. Run counterfactual analysis:
-   python src/counterfactuals.py
+The project moves beyond scoring approaches and offers a transparent, rule-based diagnostic framework for institutional AI readiness.
