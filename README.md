@@ -1,4 +1,4 @@
-nstitutional AI Readiness Model
+Institutional AI Readiness Model
 Rule-Based Configurational Approach to National AI Commitment
 Overview
 
