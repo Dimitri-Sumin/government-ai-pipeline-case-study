@@ -103,6 +103,8 @@ Transparent classification framework
 
 The project therefore moves beyond scoring and offers a transparent, rule-based diagnostic framework for institutional AI readiness.
 
+Data examples are anonymized and provided for structural demonstration purposes.
+
 ## How to Run
 
 1. Install dependencies:
