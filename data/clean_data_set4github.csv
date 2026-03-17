@@ -1,0 +1,670 @@
+lead_id,country,type,stage,stage_order,won,is_closed
+1,Vietnam,Government,outreach,1,0,0
+2,Vietnam,Government,outreach,1,0,0
+3,Vietnam,Government,outreach,1,0,0
+4,Uzbekistan,Government,meeting,3,0,0
+6,Uzbekistan,Government,meeting,3,0,0
+7,Uzbekistan,Government,meeting,3,0,0
+8,Uzbekistan,Government,meeting,3,0,0
+9,Uzbekistan,Government,engagement,2,0,0
+10,Uzbekistan,Government,meeting,3,0,0
+11,Uzbekistan,Government,meeting,3,0,0
+12,Ukraine,Government,proposal,4,0,0
+13,Uganda,Government,engagement,2,0,0
+14,Uganda,Government,engagement,2,0,0
+15,Uganda,Government,engagement,2,0,0
+16,UAE,Government,outreach,1,0,0
+17,Turkmenistan,Government,outreach,1,0,0
+18,Turkey,Government,outreach,1,0,0
+19,Turkey,Government,engagement,2,0,0
+20,Tunisia,Government,engagement,2,0,0
+21,Tunisia,Government,outreach,1,0,0
+22,Tunisia,Government,outreach,1,0,0
+23,Tunisia,Government,outreach,1,0,0
+24,Tunisia,Government,outreach,1,0,0
+25,Tunisia,Government,outreach,1,0,0
+26,Togo,Government,outreach,1,0,0
+27,Tajikistan,Government,engagement,2,0,0
+28,Sri Lanka,Government,engagement,2,0,0
+29,South Korea,Government,outreach,1,0,0
+30,South Africa,Government,outreach,1,0,0
+31,South Africa,Government,outreach,1,0,0
+32,South Africa,Government,outreach,1,0,0
+33,South Africa,Government,outreach,1,0,0
+34,South Africa,Government,outreach,1,0,0
+35,South Africa,Government,outreach,1,0,0
+36,South Africa,Government,outreach,1,0,0
+37,South Africa,Government,outreach,1,0,0
+38,South Africa,Government,outreach,1,0,0
+39,South Africa,Government,engagement,2,0,0
+40,South Africa,Government,outreach,1,0,0
+41,South Africa,Government,outreach,1,0,0
+42,South Africa,Government,outreach,1,0,0
+43,South Africa,Government,outreach,1,0,0
+44,South Africa,Government,outreach,1,0,0
+45,South Africa,Government,outreach,1,0,0
+46,Slovakia,Government,outreach,1,0,0
+47,Slovakia,Government,engagement,2,0,0
+48,Singapore,Government,outreach,1,0,0
+49,Singapore,Government,outreach,1,0,0
+50,Singapore,Government,outreach,1,0,0
+51,Singapore,Government,outreach,1,0,0
+52,Singapore,Government,outreach,1,0,0
+53,Singapore,Government,outreach,1,0,0
+54,Singapore,Government,meeting,3,0,0
+55,Serbia,Government,outreach,1,0,0
+56,Rwanda,Government,outreach,1,0,0
+57,Romania,Government,outreach,1,0,0
+58,Romania,Government,engagement,2,0,0
+59,Romania,Government,engagement,2,0,0
+60,Romania,Government,outreach,1,0,0
+61,Romania,Government,outreach,1,0,0
+62,Romania,Government,outreach,1,0,0
+63,Romania,Government,engagement,2,0,0
+64,Romania,Government,outreach,1,0,0
+65,Qatar,Government,engagement,2,0,0
+66,Qatar,Government,proposal,4,0,0
+67,Qatar,Government,outreach,1,0,0
+68,Qatar,Government,engagement,2,0,0
+69,Qatar,Government,outreach,1,0,0
+70,Qatar,Government,outreach,1,0,0
+71,Qatar,Government,outreach,1,0,0
+72,Qatar,Government,outreach,1,0,0
+73,Qatar,Government,outreach,1,0,0
+74,Qatar,Government,outreach,1,0,0
+75,Qatar,Government,outreach,1,0,0
+76,Qatar,Government,outreach,1,0,0
+77,Qatar,Government,outreach,1,0,0
+78,Qatar,Government,outreach,1,0,0
+79,Qatar,Government,outreach,1,0,0
+80,Qatar,Government,engagement,2,0,0
+81,Pakistan,Government,outreach,1,0,0
+82,Pakistan,Government,outreach,1,0,0
+83,Pakistan,Government,outreach,1,0,0
+84,Pakistan,Government,outreach,1,0,0
+85,Pakistan,Government,meeting,3,0,0
+86,Pakistan,Government,outreach,1,0,0
+87,Pakistan,Government,outreach,1,0,0
+88,Pakistan,Government,outreach,1,0,0
+89,Pakistan,Government,outreach,1,0,0
+90,Pakistan,Government,outreach,1,0,0
+91,Pakistan,Government,outreach,1,0,0
+92,Pakistan,Government,outreach,1,0,0
+93,Pakistan,Government,outreach,1,0,0
+94,Pakistan,Government,outreach,1,0,0
+95,Pakistan,Government,engagement,2,0,0
+96,Pakistan,Government,engagement,2,0,0
+97,Pakistan,Government,outreach,1,0,0
+98,Pakistan,Government,outreach,1,0,0
+99,Pakistan,Government,outreach,1,0,0
+100,Pakistan,Government,outreach,1,0,0
+101,Pakistan,Government,outreach,1,0,0
+102,Pakistan,Government,outreach,1,0,0
+103,Oman,Government,meeting,3,0,0
+104,Morocco,Government,engagement,2,0,0
+105,Morocco,Government,engagement,2,0,0
+106,Montenegro,Government,engagement,2,0,0
+107,Montenegro,Government,outreach,1,0,0
+108,Montenegro,Government,engagement,2,0,0
+109,Moldova,Government,outreach,1,0,0
+110,Moldova,Government,engagement,2,0,0
+111,Moldova,Government,engagement,2,0,0
+112,Malaysia,Government,meeting,3,0,0
+113,Malaysia,Government,proposal,4,0,0
+114,Malaysia,Government,engagement,2,0,0
+115,Malaysia,Government,outreach,1,0,0
+116,Malaysia,Government,meeting,3,0,0
+117,Malaysia,Government,outreach,1,0,0
+118,Malawi,Government,outreach,1,0,0
+119,Lebanon,Government,outreach,1,0,0
+120,Lebanon,Government,outreach,1,0,0
+121,Lebanon,Government,outreach,1,0,0
+122,Lebanon,Government,outreach,1,0,0
+123,Lebanon,Government,engagement,2,0,0
+124,Lebanon,Government,outreach,1,0,0
+125,Lebanon,Government,meeting,3,0,0
+126,Kyrgyzstan,Government,outreach,1,0,0
+127,Kuwait,Government,outreach,1,0,0
+128,Kuwait,Government,outreach,1,0,0
+129,Kuwait,Government,outreach,1,0,0
+130,Kuwait,Government,outreach,1,0,0
+131,South Korea,Government,outreach,1,0,0
+132,South Korea,Government,outreach,1,0,0
+133,South Korea,Government,outreach,1,0,0
+134,South Korea,Government,outreach,1,0,0
+135,South Korea,Government,outreach,1,0,0
+136,South Korea,Government,outreach,1,0,0
+137,South Korea,Government,outreach,1,0,0
+138,South Korea,Government,outreach,1,0,0
+139,South Korea,Government,outreach,1,0,0
+140,South Korea,Government,outreach,1,0,0
+141,South Korea,Government,outreach,1,0,0
+142,South Korea,Government,outreach,1,0,0
+143,South Korea,Government,outreach,1,0,0
+144,South Korea,Government,outreach,1,0,0
+145,South Korea,Government,outreach,1,0,0
+146,South Korea,Government,outreach,1,0,0
+147,South Korea,Government,outreach,1,0,0
+148,South Korea,Government,outreach,1,0,0
+149,South Korea,Government,outreach,1,0,0
+150,Kazakhstan,Government,engagement,2,0,0
+151,Kazakhstan,Government,outreach,1,0,0
+152,Kazakhstan,Government,engagement,2,0,0
+153,Kazakhstan,Government,engagement,2,0,0
+154,Kazakhstan,Government,engagement,2,0,0
+155,Jordan,Government,outreach,1,0,0
+156,Jordan,Government,proposal,4,0,0
+157,Ireland,Government,outreach,1,0,0
+158,Ireland,Government,outreach,1,0,0
+159,Ireland,Government,outreach,1,0,0
+160,Ireland,Government,outreach,1,0,0
+161,Ireland,Government,outreach,1,0,0
+162,Ireland,Government,outreach,1,0,0
+163,Ireland,Government,outreach,1,0,0
+164,Iraq,Government,outreach,1,0,0
+165,Iraq,Government,outreach,1,0,0
+166,Iraq,Government,outreach,1,0,0
+167,Iraq,Government,outreach,1,0,0
+168,Indonesia,Government,outreach,1,0,0
+169,Indonesia,Government,outreach,1,0,0
+170,Indonesia,Government,outreach,1,0,0
+171,India,Government,outreach,1,0,0
+172,India,Government,outreach,1,0,0
+173,India,Government,outreach,1,0,0
+174,India,Government,outreach,1,0,0
+175,India,Government,outreach,1,0,0
+176,India,Government,outreach,1,0,0
+177,India,Government,outreach,1,0,0
+178,India,Government,outreach,1,0,0
+179,Greece,Government,outreach,1,0,0
+180,Greece,Government,outreach,1,0,0
+181,Greece,Government,outreach,1,0,0
+182,Greece,Government,engagement,2,0,0
+183,Greece,Government,engagement,2,0,0
+184,Greece,Government,engagement,2,0,0
+185,Greece,Government,outreach,1,0,0
+186,Greece,Government,outreach,1,0,0
+187,Greece,Government,outreach,1,0,0
+188,Greece,Government,outreach,1,0,0
+189,Greece,Government,outreach,1,0,0
+190,Greece,Government,outreach,1,0,0
+191,Georgia,Government,outreach,1,0,0
+192,Georgia,Government,outreach,1,0,0
+193,Georgia,Government,engagement,2,0,0
+194,Ethiopia,Government,outreach,1,0,0
+195,Estonia,Government,outreach,1,0,0
+196,Estonia,Government,meeting,3,0,0
+197,Estonia,Government,engagement,2,0,0
+198,Estonia,Government,engagement,2,0,0
+199,Egypt,Government,outreach,1,0,0
+200,Egypt,Government,engagement,2,0,0
+201,Egypt,Government,outreach,1,0,0
+202,Egypt,Government,outreach,1,0,0
+203,Egypt,Government,outreach,1,0,0
+204,Egypt,Government,outreach,1,0,0
+205,Egypt,Government,engagement,2,0,0
+206,Egypt,Government,outreach,1,0,0
+207,Egypt,Government,outreach,1,0,0
+208,Egypt,Government,outreach,1,0,0
+209,Egypt,Government,outreach,1,0,0
+210,Egypt,Government,outreach,1,0,0
+211,Egypt,Government,outreach,1,0,0
+212,Egypt,Government,outreach,1,0,0
+213,Egypt,Government,outreach,1,0,0
+214,Egypt,Government,outreach,1,0,0
+215,Egypt,Government,engagement,2,0,0
+216,Egypt,Government,engagement,2,0,0
+217,Egypt,Government,outreach,1,0,0
+218,Egypt,Government,outreach,1,0,0
+219,Egypt,Government,outreach,1,0,0
+220,Egypt,Government,outreach,1,0,0
+221,Egypt,Government,outreach,1,0,0
+222,Egypt,Government,engagement,2,0,0
+223,Denmark,Government,outreach,1,0,0
+224,Denmark,Government,outreach,1,0,0
+225,Denmark,Government,outreach,1,0,0
+226,Denmark,Government,outreach,1,0,0
+227,Denmark,Government,engagement,2,0,0
+228,Denmark,Government,outreach,1,0,0
+229,Denmark,Government,outreach,1,0,0
+230,Denmark,Government,outreach,1,0,0
+231,Denmark,Government,engagement,2,0,0
+232,Denmark,Government,outreach,1,0,0
+233,Denmark,Government,outreach,1,0,0
+234,Denmark,Government,outreach,1,0,0
+235,Denmark,Government,outreach,1,0,0
+236,Denmark,Government,engagement,2,0,0
+237,Denmark,Government,outreach,1,0,0
+238,Denmark,Government,outreach,1,0,0
+239,Denmark,Government,outreach,1,0,0
+240,Denmark,Government,outreach,1,0,0
+241,Denmark,Government,outreach,1,0,0
+242,Denmark,Government,outreach,1,0,0
+243,Czech Republic,Government,outreach,1,0,0
+244,Czech Republic,Government,outreach,1,0,0
+245,Czech Republic,Government,outreach,1,0,0
+246,Czech Republic,Government,outreach,1,0,0
+247,Czech Republic,Government,outreach,1,0,0
+248,Czech Republic,Government,outreach,1,0,0
+249,Czech Republic,Government,outreach,1,0,0
+250,Cyprus,Government,outreach,1,0,0
+251,Cyprus,Government,outreach,1,0,0
+252,Croatia,Government,engagement,2,0,0
+253,Croatia,Government,outreach,1,0,0
+254,Croatia,Government,engagement,2,0,0
+255,Croatia,Government,outreach,1,0,0
+256,Bulgaria,Government,outreach,1,0,0
+257,Bulgaria,Government,outreach,1,0,0
+259,Bulgaria,Government,outreach,1,0,0
+260,Bulgaria,Government,engagement,2,0,0
+261,Bulgaria,Government,outreach,1,0,0
+262,Bulgaria,Government,outreach,1,0,0
+263,Belgium,Government,outreach,1,0,0
+264,Belgium,Government,outreach,1,0,0
+265,Bahrain,Government,outreach,1,0,0
+266,Bahrain,Government,outreach,1,0,0
+267,Bahrain,Government,outreach,1,0,0
+268,Bahrain,Government,outreach,1,0,0
+269,Bahrain,Government,engagement,2,0,0
+270,Bahrain,Government,outreach,1,0,0
+271,Bahrain,Government,outreach,1,0,0
+272,Bahrain,Government,outreach,1,0,0
+273,Bahrain,Government,outreach,1,0,0
+274,Bahrain,Government,outreach,1,0,0
+275,Azerbaijan,Government,meeting,3,0,0
+276,Armenia,Government,outreach,1,0,0
+277,Armenia,Government,outreach,1,0,0
+278,Armenia,Government,outreach,1,0,0
+279,Algeria,Government,outreach,1,0,0
+280,Albania,Government,outreach,1,0,0
+281,Albania,Government,outreach,1,0,0
+282,Albania,Government,outreach,1,0,0
+283,Albania,Government,outreach,1,0,0
+284,Albania,Government,outreach,1,0,0
+285,Georgia,Government,outreach,1,0,0
+286,Thailand,Government,outreach,1,0,0
+287,Thailand,Government,outreach,1,0,0
+288,Thailand,Government,outreach,1,0,0
+289,Thailand,Government,outreach,1,0,0
+290,Thailand,Government,outreach,1,0,0
+291,Thailand,Government,outreach,1,0,0
+292,Thailand,Government,outreach,1,0,0
+293,Thailand,Government,outreach,1,0,0
+294,Thailand,Government,outreach,1,0,0
+295,Thailand,Government,outreach,1,0,0
+296,Thailand,Government,outreach,1,0,0
+297,Thailand,Government,outreach,1,0,0
+298,Thailand,Government,outreach,1,0,0
+299,Thailand,Government,outreach,1,0,0
+300,Thailand,Government,outreach,1,0,0
+301,Cambodia,Government,outreach,1,0,0
+302,Cambodia,Government,engagement,2,0,0
+303,Cambodia,Government,outreach,1,0,0
+304,Cambodia,Government,outreach,1,0,0
+305,Cambodia,Government,outreach,1,0,0
+306,Cambodia,Government,outreach,1,0,0
+307,Cambodia,Government,outreach,1,0,0
+308,Cambodia,Government,outreach,1,0,0
+309,Cambodia,Government,outreach,1,0,0
+310,Cambodia,Government,outreach,1,0,0
+311,Cambodia,Government,outreach,1,0,0
+312,Benin,Government,outreach,1,0,0
+313,Mongolia,Government,outreach,1,0,0
+314,Mongolia,Government,engagement,2,0,0
+315,Mongolia,Government,outreach,1,0,0
+316,Mongolia,Government,outreach,1,0,0
+317,Mongolia,Government,outreach,1,0,0
+318,Mongolia,Government,outreach,1,0,0
+319,Mongolia,Government,outreach,1,0,0
+320,Mongolia,Government,outreach,1,0,0
+321,Mongolia,Government,engagement,2,0,0
+322,Mongolia,Government,outreach,1,0,0
+323,Mongolia,Government,outreach,1,0,0
+324,Mongolia,Government,outreach,1,0,0
+325,Mongolia,Government,outreach,1,0,0
+326,Guinea,Government,proposal,4,0,0
+327,Guinea,Government,outreach,1,0,0
+328,Namibia,Government,outreach,1,0,0
+329,Namibia,Government,outreach,1,0,0
+330,Laos,Government,lost_no_budget,5,0,1
+331,Laos,Government,lost_no_budget,5,0,1
+332,Laos,Government,outreach,1,0,0
+333,Laos,Government,outreach,1,0,0
+334,Laos,Government,outreach,1,0,0
+335,Laos,Government,outreach,1,0,0
+336,Laos,Government,outreach,1,0,0
+337,USA,Government,outreach,1,0,0
+338,Namibia,Government,outreach,1,0,0
+339,Namibia,Government,outreach,1,0,0
+340,Namibia,Government,outreach,1,0,0
+341,Namibia,Government,outreach,1,0,0
+342,Namibia,Government,outreach,1,0,0
+343,Uruguay,Government,outreach,1,0,0
+344,Uruguay,Government,outreach,1,0,0
+345,Uruguay,Government,outreach,1,0,0
+346,UAE,Government,outreach,1,0,0
+347,Kenya,Government,engagement,2,0,0
+348,Côte d'Ivoire,Government,engagement,2,0,0
+349,Côte d'Ivoire,Government,outreach,1,0,0
+350,Côte d'Ivoire,Government,outreach,1,0,0
+351,Côte d'Ivoire,Government,outreach,1,0,0
+352,Côte d'Ivoire,Government,outreach,1,0,0
+353,Côte d'Ivoire,Government,outreach,1,0,0
+354,Philippines,Government,outreach,1,0,0
+355,Philippines,Government,outreach,1,0,0
+356,Philippines,Government,outreach,1,0,0
+357,Philippines,Government,outreach,1,0,0
+358,Philippines,Government,outreach,1,0,0
+359,Philippines,Government,outreach,1,0,0
+360,Philippines,Government,outreach,1,0,0
+361,Philippines,Government,outreach,1,0,0
+362,Philippines,Government,outreach,1,0,0
+363,Philippines,Government,outreach,1,0,0
+364,Philippines,Government,outreach,1,0,0
+365,Philippines,Government,outreach,1,0,0
+366,Philippines,Government,outreach,1,0,0
+367,Philippines,Government,outreach,1,0,0
+368,Philippines,Government,outreach,1,0,0
+369,Philippines,Government,outreach,1,0,0
+370,Philippines,Government,outreach,1,0,0
+371,Philippines,Government,engagement,2,0,0
+372,Philippines,Government,outreach,1,0,0
+373,Philippines,Government,outreach,1,0,0
+374,Philippines,Government,engagement,2,0,0
+375,Philippines,Government,outreach,1,0,0
+376,Philippines,Government,meeting,3,0,0
+377,Philippines,Government,meeting,3,0,0
+378,Philippines,Government,meeting,3,0,0
+379,Philippines,Government,outreach,1,0,0
+380,Poland,Government,engagement,2,0,0
+381,Poland,Government,outreach,1,0,0
+382,Poland,Government,engagement,2,0,0
+383,Poland,Government,outreach,1,0,0
+384,Poland,Government,outreach,1,0,0
+385,Poland,Government,outreach,1,0,0
+386,Poland,Government,outreach,1,0,0
+387,Poland,Government,outreach,1,0,0
+388,Poland,Government,outreach,1,0,0
+389,Poland,Government,outreach,1,0,0
+390,Poland,Government,outreach,1,0,0
+391,Poland,Government,outreach,1,0,0
+392,Poland,Government,engagement,2,0,0
+393,Poland,Government,outreach,1,0,0
+394,India,Government,outreach,1,0,0
+395,Myanmar,Government,outreach,1,0,0
+396,Myanmar,Government,outreach,1,0,0
+397,Myanmar,Government,outreach,1,0,0
+398,Myanmar,Government,outreach,1,0,0
+399,Myanmar,Government,outreach,1,0,0
+400,Myanmar,Government,outreach,1,0,0
+401,Myanmar,Government,outreach,1,0,0
+402,Myanmar,Government,outreach,1,0,0
+403,Israel,Enterprise,proposal,4,0,0
+404,Israel,Enterprise,engagement,2,0,0
+405,Israel,Enterprise,proposal,4,0,0
+406,Israel,Enterprise,engagement,2,0,0
+407,Israel,Enterprise,engagement,2,0,0
+408,Israel,Enterprise,engagement,2,0,0
+409,Israel,Enterprise,engagement,2,0,0
+410,Israel,Enterprise,engagement,2,0,0
+411,Israel,Enterprise,engagement,2,0,0
+412,Israel,Enterprise,proposal,4,0,0
+413,Saudi Arabia,Enterprise,engagement,2,0,0
+414,USA,Enterprise,won,5,1,1
+415,USA,Enterprise,won,5,1,1
+416,UAE,Enterprise,won,5,1,1
+417,Australia,Enterprise,won,5,1,1
+418,Bulgaria,Enterprise,won,5,1,1
+420,Saudi Arabia,Government,proposal,4,0,0
+421,Hong Kong,Enterprise,won,5,1,1
+422,USA,Enterprise,outreach,1,0,0
+423,USA,Enterprise,outreach,1,0,0
+424,USA,Enterprise,outreach,1,0,0
+425,USA,Enterprise,outreach,1,0,0
+426,USA,Enterprise,outreach,1,0,0
+427,USA,Enterprise,outreach,1,0,0
+428,Bangladesh,Government,outreach,1,0,0
+429,Bangladesh,Government,outreach,1,0,0
+430,Bangladesh,Government,outreach,1,0,0
+431,Bangladesh,Government,outreach,1,0,0
+432,Bangladesh,Government,outreach,1,0,0
+433,Malaysia,Government,meeting,3,0,0
+434,Georgia,Government,engagement,2,0,0
+435,Bangladesh,Government,outreach,1,0,0
+436,Bangladesh,Government,outreach,1,0,0
+437,Bangladesh,Government,engagement,2,0,0
+438,Bangladesh,Government,outreach,1,0,0
+439,UAE,Government,meeting,3,0,0
+440,Saudi Arabia,Enterprise,meeting,3,0,0
+441,Cameroon,Government,outreach,1,0,0
+442,CAR,Government,outreach,1,0,0
+443,Cameroon,Government,outreach,1,0,0
+444,Cameroon,Government,outreach,1,0,0
+445,Cameroon,Government,outreach,1,0,0
+446,Cameroon,Government,engagement,2,0,0
+447,Guinea,Government,meeting,3,0,0
+448,Guinea,Government,meeting,3,0,0
+449,Algeria,Government,outreach,1,0,0
+450,Angola,Government,outreach,1,0,0
+451,Angola,Government,engagement,2,0,0
+452,Angola,Government,outreach,1,0,0
+453,Algeria,Government,outreach,1,0,0
+454,Algeria,Government,outreach,1,0,0
+455,Algeria,Government,outreach,1,0,0
+456,Algeria,Government,outreach,1,0,0
+457,Algeria,Government,outreach,1,0,0
+458,Sierra Leone,Government,outreach,1,0,0
+459,Sierra Leone,Government,outreach,1,0,0
+460,Sierra Leone,Government,outreach,1,0,0
+461,Sierra Leone,Government,outreach,1,0,0
+462,Sierra Leone,Government,outreach,1,0,0
+463,Sierra Leone,Government,outreach,1,0,0
+464,Mauritius,Government,outreach,1,0,0
+465,Sierra Leone,Government,outreach,1,0,0
+466,Qatar,Government,outreach,1,0,0
+467,Bolivia,Government,outreach,1,0,0
+468,Cuba,Government,outreach,1,0,0
+469,Spain,Enterprise,outreach,1,0,0
+470,UAE,Government,outreach,1,0,0
+471,Kazakhstan,Government,outreach,1,0,0
+472,UAE,Government,outreach,1,0,0
+473,Kenya,Government,outreach,1,0,0
+474,Botswana,Government,outreach,1,0,0
+475,Botswana,Government,outreach,1,0,0
+476,Botswana,Government,outreach,1,0,0
+477,Botswana,Government,engagement,2,0,0
+478,Botswana,Government,outreach,1,0,0
+479,Botswana,Government,outreach,1,0,0
+480,Botswana,Government,outreach,1,0,0
+481,Maldives,Government,outreach,1,0,0
+482,Maldives,Government,outreach,1,0,0
+483,Maldives,Government,outreach,1,0,0
+484,Maldives,Government,outreach,1,0,0
+485,Maldives,Government,engagement,2,0,0
+486,Maldives,Government,outreach,1,0,0
+487,Maldives,Government,outreach,1,0,0
+488,Maldives,Government,outreach,1,0,0
+489,Maldives,Government,outreach,1,0,0
+490,Maldives,Government,outreach,1,0,0
+491,Maldives,Government,outreach,1,0,0
+492,Comoros,Government,outreach,1,0,0
+493,Comoros,Government,outreach,1,0,0
+494,Comoros,Government,outreach,1,0,0
+495,Comoros,Government,engagement,2,0,0
+496,Brunei,Government,outreach,1,0,0
+497,Brunei,Government,outreach,1,0,0
+498,Brunei,Government,outreach,1,0,0
+499,India,Government,engagement,2,0,0
+500,Tajikistan,Government,engagement,2,0,0
+501,Brazil,Government,engagement,2,0,0
+502,Panama,Government,outreach,1,0,0
+503,Panama,Government,outreach,1,0,0
+504,Panama,Government,outreach,1,0,0
+505,Panama,Government,outreach,1,0,0
+506,Panama,Government,outreach,1,0,0
+507,UAE,Government,outreach,1,0,0
+508,UAE,Government,outreach,1,0,0
+509,UAE,Government,outreach,1,0,0
+510,UAE,Government,outreach,1,0,0
+511,UAE,Government,outreach,1,0,0
+512,UAE,Government,outreach,1,0,0
+513,Kuwait,Government,outreach,1,0,0
+514,Kuwait,Government,outreach,1,0,0
+515,UAE,Government,meeting,3,0,0
+516,Canada,Government,outreach,1,0,0
+517,United Kingdom,Government,outreach,1,0,0
+518,Norway,Government,outreach,1,0,0
+519,Costa Rica,Government,outreach,1,0,0
+520,Costa Rica,Government,outreach,1,0,0
+521,Venezuela,Government,outreach,1,0,0
+522,Costa Rica,Government,outreach,1,0,0
+523,Colombia,Government,outreach,1,0,0
+524,Mexico,Government,outreach,1,0,0
+525,Colombia,Government,outreach,1,0,0
+526,Kenya,Government,outreach,1,0,0
+527,UAE,Government,outreach,1,0,0
+528,UAE,Government,outreach,1,0,0
+529,UAE,Government,outreach,1,0,0
+531,UAE,Government,outreach,1,0,0
+532,UAE,Government,outreach,1,0,0
+533,UAE,Government,outreach,1,0,0
+534,UAE,Government,outreach,1,0,0
+535,UAE,Government,outreach,1,0,0
+536,Mexico,Government,outreach,1,0,0
+537,Mexico,Government,outreach,1,0,0
+538,Mexico,Government,outreach,1,0,0
+539,Mexico,Government,outreach,1,0,0
+540,Ecuador,Government,outreach,1,0,0
+541,Ecuador,Government,outreach,1,0,0
+542,Ecuador,Government,outreach,1,0,0
+543,UAE,Enterprise,engagement,2,0,0
+544,UAE,Enterprise,engagement,2,0,0
+545,UAE,Enterprise,engagement,2,0,0
+546,UAE,Enterprise,outreach,1,0,0
+548,UAE,Government,outreach,1,0,0
+550,UAE,Enterprise,lost,5,0,1
+551,UAE,Enterprise,lost,5,0,1
+552,UAE,Enterprise,lost,5,0,1
+553,UAE,Enterprise,lost,5,0,1
+554,UAE,Enterprise,lost,5,0,1
+555,UAE,Government,outreach,1,0,0
+556,UAE,Government,outreach,1,0,0
+557,UAE,Government,outreach,1,0,0
+558,UAE,Government,outreach,1,0,0
+559,UAE,Government,outreach,1,0,0
+560,UAE,Government,outreach,1,0,0
+561,UAE,Government,outreach,1,0,0
+562,UAE,Government,outreach,1,0,0
+563,UAE,Government,outreach,1,0,0
+564,UAE,Government,outreach,1,0,0
+565,UAE,Government,outreach,1,0,0
+566,UAE,Government,outreach,1,0,0
+567,UAE,Government,outreach,1,0,0
+568,UAE,Government,outreach,1,0,0
+569,UAE,Government,outreach,1,0,0
+570,UAE,Government,outreach,1,0,0
+571,UAE,Government,outreach,1,0,0
+572,UAE,Enterprise,lost,5,0,1
+573,UAE,Enterprise,lost,5,0,1
+574,UAE,Enterprise,engagement,2,0,0
+575,UAE,Enterprise,engagement,2,0,0
+576,UAE,Enterprise,engagement,2,0,0
+577,UAE,Government,engagement,2,0,0
+578,UAE,Government,outreach,1,0,0
+579,UAE,Government,outreach,1,0,0
+580,UAE,Government,outreach,1,0,0
+581,UAE,Government,outreach,1,0,0
+582,UAE,Government,outreach,1,0,0
+583,UAE,Government,outreach,1,0,0
+584,UAE,Government,outreach,1,0,0
+585,UAE,Government,outreach,1,0,0
+586,UAE,Government,outreach,1,0,0
+587,UAE,Government,outreach,1,0,0
+588,UAE,Government,outreach,1,0,0
+589,UAE,Government,outreach,1,0,0
+590,UAE,Government,outreach,1,0,0
+591,UAE,Government,outreach,1,0,0
+592,UAE,Government,outreach,1,0,0
+593,UAE,Government,outreach,1,0,0
+594,UAE,Government,outreach,1,0,0
+595,UAE,Government,outreach,1,0,0
+596,Bahrain,Government,outreach,1,0,0
+597,Bahrain,Government,outreach,1,0,0
+598,Bahrain,Government,outreach,1,0,0
+599,Bahrain,Government,outreach,1,0,0
+600,Bahrain,Government,outreach,1,0,0
+601,Bahrain,Government,outreach,1,0,0
+602,Bahrain,Government,outreach,1,0,0
+603,Bahrain,Government,outreach,1,0,0
+604,Bahrain,Government,outreach,1,0,0
+605,Bahrain,Government,engagement,2,0,0
+606,Saudi Arabia,Government,engagement,2,0,0
+607,Saudi Arabia,Enterprise,outreach,1,0,0
+608,Saudi Arabia,Government,outreach,1,0,0
+609,Saudi Arabia,Enterprise,outreach,1,0,0
+610,Saudi Arabia,Enterprise,outreach,1,0,0
+611,UAE,Government,outreach,1,0,0
+612,Saudi Arabia,Government,outreach,1,0,0
+613,Qatar,Government,outreach,1,0,0
+614,Qatar,Government,outreach,1,0,0
+615,Qatar,Government,outreach,1,0,0
+616,Qatar,Government,outreach,1,0,0
+617,Qatar,Government,outreach,1,0,0
+618,Qatar,Government,outreach,1,0,0
+619,Qatar,Government,outreach,1,0,0
+620,Qatar,Government,outreach,1,0,0
+621,Qatar,Government,outreach,1,0,0
+622,Qatar,Government,outreach,1,0,0
+623,Qatar,Government,outreach,1,0,0
+624,Morocco,Government,outreach,1,0,0
+625,Morocco,Government,outreach,1,0,0
+626,Morocco,Government,outreach,1,0,0
+627,Morocco,Government,outreach,1,0,0
+628,Morocco,Government,outreach,1,0,0
+629,Morocco,Government,outreach,1,0,0
+630,Morocco,Government,outreach,1,0,0
+631,Morocco,Government,engagement,2,0,0
+632,Morocco,Government,outreach,1,0,0
+633,Morocco,Government,meeting,3,0,0
+634,Morocco,Government,outreach,1,0,0
+635,Morocco,Government,outreach,1,0,0
+636,Morocco,Government,outreach,1,0,0
+637,United Kingdom,Enterprise,outreach,1,0,0
+638,UAE,Government,outreach,1,0,0
+639,UAE,Government,outreach,1,0,0
+640,UAE,Government,outreach,1,0,0
+641,UAE,Government,outreach,1,0,0
+642,UAE,Government,outreach,1,0,0
+643,UAE,Enterprise,outreach,1,0,0
+644,UAE,Government,outreach,1,0,0
+645,Saudi Arabia,Government,outreach,1,0,0
+646,Saudi Arabia,Government,outreach,1,0,0
+647,Saudi Arabia,Government,outreach,1,0,0
+648,Saudi Arabia,Government,outreach,1,0,0
+649,Saudi Arabia,Government,outreach,1,0,0
+650,Saudi Arabia,Government,outreach,1,0,0
+651,Saudi Arabia,Government,outreach,1,0,0
+652,Saudi Arabia,Government,outreach,1,0,0
+653,Saudi Arabia,Government,outreach,1,0,0
+654,Saudi Arabia,Government,outreach,1,0,0
+655,Saudi Arabia,Government,outreach,1,0,0
+656,Saudi Arabia,Government,outreach,1,0,0
+657,Saudi Arabia,Government,outreach,1,0,0
+658,Saudi Arabia,Government,outreach,1,0,0
+659,Saudi Arabia,Government,outreach,1,0,0
+660,Saudi Arabia,Government,engagement,2,0,0
+661,Saudi Arabia,Government,outreach,1,0,0
+662,Saudi Arabia,Government,outreach,1,0,0
+663,Saudi Arabia,Government,outreach,1,0,0
+664,Saudi Arabia,Government,outreach,1,0,0
+665,Saudi Arabia,Government,outreach,1,0,0
+666,Saudi Arabia,Government,outreach,1,0,0
+667,Saudi Arabia,Government,outreach,1,0,0
+668,Saudi Arabia,Government,outreach,1,0,0
+669,Saudi Arabia,Government,outreach,1,0,0
+670,Saudi Arabia,Government,outreach,1,0,0
+671,UAE,Government,outreach,1,0,0
+672,UAE,Government,outreach,1,0,0
+673,UAE,Government,outreach,1,0,0
+674,UAE,Government,outreach,1,0,0
+675,Lebanon,Government,outreach,1,0,0
