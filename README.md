@@ -1,148 +1,118 @@
-Institutional AI Readiness Model
-Rule-Based Configurational Approach to National AI Commitment
-Overview
+# Government AI Pipeline Case Study
 
-This repository presents a rule-based institutional model designed to explain when national-level AI programs reach strategic commitment.
+Analytical case study based on a real institutional AI pipeline involving government-level engagements.
 
-The framework formalizes institutional conditions frequently observed in public-sector AI initiatives and translates them into a transparent, reproducible analytical model implemented in Python.
+The project focuses on transforming raw lead data into a structured, explainable model for prioritization and strategic decision-making.
 
-The focus is institutional feasibility rather than market demand or predictive modeling.
+---
 
-Research Question
+## Objective
 
-What institutional conditions are necessary for a country to reach strategic commitment in national-level AI programs?
+To design a rule-based analytical framework that evaluates country-level AI readiness and supports prioritization of opportunities in a government AI pipeline.
 
-Conceptual Framework
+---
 
-The model follows a configurational logic rather than additive scoring.
+## Dataset
 
-Strategic commitment is not treated as a cumulative index.
-Instead, it emerges only when specific institutional conditions are jointly satisfied.
+The dataset contains structured information about government leads across multiple countries, including:
 
-The framework operationalizes three core dimensions:
+- country  
+- stage (outreach, engagement, meeting, proposal)  
+- stage_order  
+- deal progression indicators (won, is_closed)  
 
-SA (Senior Access) — direct access to senior decision-makers capable of strategic authorization
+Main file:  
+data/clean_dataset.xlsx
 
-STR (Formal Strategy) — existence of a formal national AI strategy
+---
 
-EX (Execution Capacity) — ability to operationalize AI initiatives
+## Methodology
 
-Execution capacity is derived from two observable signals:
+The analysis is built in two layers:
 
-Budget_Signal — presence of an explicit funding or budget commitment
+### 1. Data aggregation
 
-Blocking_Constraint — presence of structural, governance, or institutional barriers
+Lead-level data is aggregated to the country level:
+- number of leads  
+- maximum stage reached  
+- engagement intensity  
 
-Execution capacity is defined as:
+This allows moving from individual deals to country-level signals.
 
-EX = 1 if Budget_Signal = 1 AND Blocking_Constraint = 0
-Otherwise EX = 0
+---
 
-Classification Logic
+### 2. Rule-based readiness model
 
-The model applies strict necessary-condition reasoning:
+A structured rule-based layer translates qualitative signals into analytical variables:
 
-Level 1 → SA = 0
+- SA (Strategic Alignment)  
+- STR (Stakeholder Readiness)  
+- Budget_Signal  
+- Blocking_Constraint  
 
-Level 2 → SA = 1 AND (STR = 0 OR EX = 0)
+Defined in:  
+data/country_rules.csv  
 
-Level 3 → SA = 1 AND STR = 1 AND EX = 1
+These variables are used to classify countries into readiness segments.
 
-This structure reflects conjunctural causality:
-absence of any required condition prevents the highest level of institutional commitment.
+---
 
-Methodological Positioning
+## Priority Logic
 
-This is not a predictive ML model and does not rely on regression or scoring techniques.
+Final prioritization is based on a simple but explainable logic:
 
-Instead, it:
+- Blocking constraint (e.g. budget) overrides everything → Delayed  
+- High readiness → Focus  
+- Medium readiness → Nurture  
+- Low readiness → Low Priority  
 
-Applies necessary-condition logic
+This creates a transparent decision framework rather than a black-box model.
 
-Uses transparent binary institutional signals
+---
 
-Explicitly maps conceptual assumptions to operational rules
+## Output
 
-Enables structural diagnostics rather than probabilistic prediction
+The model produces a country-level prioritization:
 
-The approach is structurally closer to institutional analysis and QCA-style reasoning than to additive scoring models.
+- Focus  
+- Nurture  
+- Delayed  
+- Low Priority  
 
-Implementation
+This can be used to:
+- guide sales strategy  
+- allocate resources  
+- identify high-potential markets  
 
-The repository includes:
+---
 
-A full truth table covering all possible institutional configurations
+## Key Insight
 
-A classification script applying the rule-based logic
+The project demonstrates how qualitative signals (political context, budget constraints, engagement level) can be formalized into a structured analytical model.
 
-A counterfactual analysis module identifying binding constraints
+---
 
-Reproducible results generated from structured CSV inputs
+## Tech Stack
 
-The logic is implemented in Python and can be applied to any dataset structured around the defined institutional variables.
+- Excel (data structuring, pivot analysis)  
+- Rule-based modeling  
+- GitHub (project structure and documentation)  
 
-Counterfactual Analysis
+---
 
-Beyond static classification, the model includes a counterfactual layer to identify binding institutional constraints.
+## Project Structure
 
-For each case, the framework evaluates:
+data/  
+  clean_dataset.xlsx  
+  country_rules.csv  
 
-Baseline predicted level
+src/  
+  (analysis scripts – optional)  
 
-Level if blocking constraints were removed
+README.md  
 
-Level if budget signals were activated
+---
 
-Level if both constraints were resolved
+## Author
 
-This allows identification of the specific bottleneck preventing advancement:
-
-Senior Access Constraint
-If SA = 0, no other institutional adjustments change the level.
-
-Budget Constraint
-Removing governance barriers does not shift commitment without explicit funding signals.
-
-Governance Constraint
-In some systems, eliminating structural barriers immediately enables Level 3.
-
-This demonstrates that national AI commitment is conjunctural rather than additive.
-Strategic advancement requires joint institutional alignment.
-
-Repository Structure
-data/      Example input dataset (anonymized)
-src/       Model scripts (classification, truth table, counterfactuals)
-outputs/   Generated analytical outputs (optional, excluded via .gitignore)
-README.md  Project documentation
-Data Note
-
-Data examples are simplified and anonymized for structural demonstration purposes.
-The model operates exclusively on abstract institutional indicators and does not rely on confidential or proprietary information.
-
-How to Run
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-Run the truth table:
-
-python src/truth_table.py
-
-Run counterfactual analysis:
-
-python src/counterfactuals.py
-
-Purpose
-
-This project demonstrates:
-
-Translation of qualitative institutional insight into formal logic
-
-Clear operationalization of strategic conditions
-
-Reproducible rule-based analytical modeling
-
-Diagnostic identification of structural constraints
-
-The project moves beyond scoring approaches and offers a transparent, rule-based diagnostic framework for institutional AI readiness.
+Dmytro Suminov
