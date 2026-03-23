@@ -13,23 +13,24 @@ The project focuses on transforming raw lead data into a structured, explainable
 
 The focus is institutional feasibility rather than market demand or predictive modeling.
 
----
-
 ## Objective
 
 What institutional conditions are necessary for a country to reach strategic commitment in national-level AI programs?  
 
 To design a rule-based analytical framework that evaluates country-level AI readiness and supports prioritization of opportunities in a government AI pipeline.
 
----
-
 ## Country Priority Distribution
 
 ![Priority Summary](priority_summary.png)
 
-The distribution is heavily skewed toward the Low priority segment (~84%), indicating a structurally unbalanced pipeline and potential inefficiencies in targeting and qualification.
+The distribution is heavily skewed toward the Low priority segment:
 
----
+- 77 countries (~84%) fall into Low Priority  
+- 9 countries are classified as Nurture  
+- 4 countries reach Focus  
+- 2 countries are Delayed  
+
+This indicates a structurally imbalanced pipeline where most countries do not meet the institutional conditions required for progression.
 
 ## Conceptual Framework
 
@@ -54,11 +55,11 @@ Execution capacity is defined as:
 EX = 1 if Budget_Signal = 1 AND Blocking_Constraint = 0  
 Otherwise EX = 0  
 
----
+Execution capacity is contingent on both funding availability and absence of structural barriers.
 
 ## Dataset
 
-The dataset contains structured information about government leads across multiple countries, including:
+The dataset contains structured information about government leads across multiple countries and reflects real B2G pipeline activity aggregated into country-level signals.
 
 - country  
 - stage (outreach, engagement, meeting, proposal)  
@@ -67,8 +68,6 @@ The dataset contains structured information about government leads across multip
 
 Main file:  
 data/clean_dataset.xlsx  
-
----
 
 ## Methodology
 
@@ -88,8 +87,8 @@ This allows moving from individual deals to country-level signals.
 
 A structured rule-based layer translates qualitative signals into analytical variables:
 
-- SA (Strategic Alignment)  
-- STR (Stakeholder Readiness)  
+- SA (Senior Access)  
+- STR (Formal Strategy)  
 - Budget_Signal  
 - Blocking_Constraint  
 
@@ -97,8 +96,6 @@ Defined in:
 data/country_rules.csv  
 
 These variables are used to classify countries into readiness segments.
-
----
 
 ## Classification Logic
 
@@ -108,23 +105,21 @@ Level 1 → SA = 0
 Level 2 → SA = 1 AND (STR = 0 OR EX = 0)  
 Level 3 → SA = 1 AND STR = 1 AND EX = 1  
 
+Level 2 represents partial readiness where access exists but either strategic alignment or execution capacity is missing.
+
 This structure reflects conjunctural causality:  
 absence of any required condition prevents the highest level of institutional commitment.
 
----
-
 ## Priority Logic
 
-Final prioritization is based on a simple but explainable logic:
+Final prioritization follows a hierarchical override logic:
 
-- Blocking constraint (e.g. budget) overrides everything → Delayed  
-- High readiness → Focus  
-- Medium readiness → Nurture  
-- Low readiness → Low Priority  
+- Blocking constraint overrides everything → Delayed  
+- Level 3 → Focus  
+- Level 2 → Nurture  
+- Level 1 → Low Priority  
 
 This creates a transparent decision framework rather than a black-box model.
-
----
 
 ## Output
 
@@ -141,49 +136,60 @@ This can be used to:
 - allocate resources  
 - identify high-potential markets  
 
----
-
 ## Pipeline Priority Analysis
 
-Detailed segmentation of pipeline performance across priority groups:
+Detailed segmentation of pipeline performance across priority groups.
 
 ### Pipeline Progression by Priority Segment
 
 ![Progression](outputs/priority_analysis/progression_by_priority.png)
 
-This chart shows the **average stage reached** per segment.
+Average stage reached per segment:
 
-- Focus countries progress the furthest in the pipeline  
-- Nurture shows partial progression  
-- Delayed and Low Priority stall early  
+- Focus → 2.55  
+- Nurture → 2.13  
+- Low Priority → 1.78  
+- Delayed → 1.62  
+
+Focus countries reach significantly higher progression compared to Low Priority (+43%), confirming alignment between institutional readiness and pipeline advancement.
+
+Nurture shows intermediate progression, while Delayed and Low Priority stall early.
 
 ### Pipeline Volume by Priority Segment
 
 ![Volume](outputs/priority_analysis/volume_by_priority.png)
 
-This chart shows the **distribution of leads** across segments.
+Number of leads per segment:
 
-- Focus and Nurture dominate the pipeline volume  
-- A significant portion remains in Delayed, indicating structural inefficiencies  
+- Focus → 273  
+- Nurture → 237  
+- Delayed → 108  
+- Low Priority → 51  
+
+Focus and Nurture dominate pipeline volume.
+
+Delayed shows meaningful volume with limited progression, indicating structural bottlenecks rather than lack of engagement.
 
 ### Interpretation
 
-Combining progression and volume reveals a clear structural pattern:
+Combining progression and volume reveals a structural pattern:
 
-- Focus → high progression + high volume → core strategic targets  
-- Nurture → moderate progression + high volume → development potential  
-- Delayed → low progression despite volume → blocked by institutional constraints  
-- Low Priority → low progression + low volume → deprioritized  
+- Focus → high progression and high volume → core strategic targets  
+- Nurture → moderate progression and high volume → development potential  
+- Delayed → low progression despite volume → constrained by institutional factors  
+- Low Priority → low progression and low volume → structurally weak segment  
 
-This confirms that pipeline inefficiency is driven by institutional conditions rather than random variation.
-
----
+Pipeline performance is strongly driven by institutional conditions rather than random variation.
 
 ## Key Insight
 
-The project demonstrates how qualitative signals (political context, budget constraints, engagement level) can be formalized into a structured analytical model.
+The pipeline is structurally inefficient:
 
----
+- 84% of countries fall into Low Priority  
+- These countries generate minimal progression  
+- Most meaningful advancement is concentrated in a small subset of countries  
+
+This indicates resource dilution across structurally unviable segments rather than lack of pipeline activity.
 
 ## Methodological Positioning
 
@@ -198,8 +204,6 @@ Instead, it:
 
 The approach is structurally closer to institutional analysis and QCA-style reasoning than to additive scoring models.
 
----
-
 ## Implementation
 
 The repository includes:
@@ -210,8 +214,6 @@ The repository includes:
 - reproducible results generated from structured CSV inputs  
 
 The logic is implemented in Python and can be applied to any dataset structured around the defined institutional variables.
-
----
 
 ## Counterfactual Analysis
 
@@ -224,7 +226,7 @@ For each case, the framework evaluates:
 - level if budget signals were activated  
 - level if both constraints were resolved  
 
-This allows identification of the specific bottleneck preventing advancement:
+This allows identification of the specific bottleneck preventing advancement.
 
 - Senior Access Constraint  
   If SA = 0, no other institutional adjustments change the level  
@@ -233,12 +235,10 @@ This allows identification of the specific bottleneck preventing advancement:
   Removing governance barriers does not shift commitment without explicit funding signals  
 
 - Governance Constraint  
-  In some systems, eliminating structural barriers immediately enables Level 3  
+  In some systems, removing structural barriers enables progression  
 
 This demonstrates that national AI commitment is conjunctural rather than additive.  
 Strategic advancement requires joint institutional alignment.
-
----
 
 ## Repository Structure
 
@@ -247,22 +247,17 @@ src/       Model scripts (classification, truth table, counterfactuals)
 outputs/   Generated analytical outputs (optional, excluded via .gitignore)  
 README.md  Project documentation  
 
----
-
 ## Tech Stack
 
 - Excel (data structuring, pivot analysis)  
-- Rule-based modeling  
+- Python (rule-based modeling, counterfactual analysis)  
 - GitHub (project structure and documentation)  
-
----
 
 ## Data Note
 
-Data examples are simplified and anonymized for structural demonstration purposes.  
-The model operates exclusively on abstract institutional indicators and does not rely on confidential or proprietary information.
+The dataset is derived from real B2G pipeline activity and has been anonymized and transformed for analytical use.
 
----
+Sensitive and identifying elements have been removed, while preserving the structural characteristics necessary for modeling institutional dynamics.
 
 ## How to Run
 
@@ -278,8 +273,6 @@ Run counterfactual analysis:
 
 python src/counterfactuals.py  
 
----
-
 ## Purpose
 
 This project demonstrates:
@@ -289,9 +282,7 @@ This project demonstrates:
 - reproducible rule-based analytical modeling  
 - diagnostic identification of structural constraints  
 
-The project moves beyond scoring approaches and offers a transparent, rule-based diagnostic framework for institutional AI readiness.
-
----
+The project offers a transparent, rule-based framework for analyzing institutional AI readiness.
 
 ## Author
 
