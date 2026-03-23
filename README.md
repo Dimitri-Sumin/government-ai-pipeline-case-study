@@ -143,6 +143,42 @@ This can be used to:
 
 ---
 
+## Pipeline Priority Analysis
+
+Detailed segmentation of pipeline performance across priority groups:
+
+### Pipeline Progression by Priority Segment
+
+![Progression](outputs/priority_analysis/progression_by_priority.png)
+
+This chart shows the **average stage reached** per segment.
+
+- Focus countries progress the furthest in the pipeline  
+- Nurture shows partial progression  
+- Delayed and Low Priority stall early  
+
+### Pipeline Volume by Priority Segment
+
+![Volume](outputs/priority_analysis/volume_by_priority.png)
+
+This chart shows the **distribution of leads** across segments.
+
+- Focus and Nurture dominate the pipeline volume  
+- A significant portion remains in Delayed, indicating structural inefficiencies  
+
+### Interpretation
+
+Combining progression and volume reveals a clear structural pattern:
+
+- Focus → high progression + high volume → core strategic targets  
+- Nurture → moderate progression + high volume → development potential  
+- Delayed → low progression despite volume → blocked by institutional constraints  
+- Low Priority → low progression + low volume → deprioritized  
+
+This confirms that pipeline inefficiency is driven by institutional conditions rather than random variation.
+
+---
+
 ## Key Insight
 
 The project demonstrates how qualitative signals (political context, budget constraints, engagement level) can be formalized into a structured analytical model.
