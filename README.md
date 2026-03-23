@@ -301,4 +301,4 @@ The project offers a transparent, rule-based framework for analyzing institution
 
 ## Author
 
-Dmytro Suminov
+Dimitri Suminov
