@@ -170,14 +170,29 @@ Focus and Nurture dominate pipeline volume.
 
 Delayed shows meaningful volume with limited progression, indicating structural bottlenecks rather than lack of engagement.
 
+### Stage Conversion Analysis
+
+To understand where pipeline progression breaks down, stage-to-stage conversion rates were analyzed.
+
+Key patterns:
+
+- High-priority segments (Focus, Nurture) show consistent conversion across stages  
+- Low Priority shows early drop-off between outreach and engagement  
+- Delayed segments demonstrate stalled conversion at later stages (proposal → won)  
+
+This confirms that pipeline inefficiency is not uniform:
+
+- Low Priority fails at early qualification  
+- Delayed fails at execution and commitment stages  
+
 ### Interpretation
 
-Combining progression and volume reveals a structural pattern:
+Combining progression, volume, and conversion reveals a structural pattern:
 
-- Focus → high progression and high volume → core strategic targets  
-- Nurture → moderate progression and high volume → development potential  
-- Delayed → low progression despite volume → constrained by institutional factors  
-- Low Priority → low progression and low volume → structurally weak segment  
+- Focus → high progression, strong conversion, high volume → core strategic targets  
+- Nurture → moderate progression and conversion → development potential  
+- Delayed → volume present but blocked at late stages → execution constraints  
+- Low Priority → early drop-off and low progression → structurally weak segment  
 
 Pipeline performance is strongly driven by institutional conditions rather than random variation.
 
