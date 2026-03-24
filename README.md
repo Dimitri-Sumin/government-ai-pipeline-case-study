@@ -1,4 +1,4 @@
-Institutional AI Readiness Model  
+# Institutional AI Readiness Model  
 Rule-Based Configurational Approach to National AI Commitment  
 
 # Government AI Pipeline Case Study
@@ -6,10 +6,10 @@ Rule-Based Configurational Approach to National AI Commitment
 ## Overview
 
 This repository presents a rule-based institutional model designed to explain when national-level AI programs reach strategic commitment.  
-Analytical case study based on a real institutional AI pipeline involving government-level engagements.
+Analytical case study based on generalized patterns observed across public-sector AI engagements.
 
 The framework formalizes institutional conditions frequently observed in public-sector AI initiatives and translates them into a transparent, reproducible analytical model implemented in Python.  
-The project focuses on transforming raw lead data into a structured, explainable model for prioritization and strategic decision-making.
+The project focuses on transforming structured engagement signals into an explainable model for prioritization and strategic decision-making.
 
 The focus is institutional feasibility rather than market demand or predictive modeling.
 
@@ -17,7 +17,7 @@ The focus is institutional feasibility rather than market demand or predictive m
 
 What institutional conditions are necessary for a country to reach strategic commitment in national-level AI programs?  
 
-To design a rule-based analytical framework that evaluates country-level AI readiness and supports prioritization of opportunities in a government AI pipeline.
+To design a rule-based analytical framework that evaluates country-level AI readiness and supports prioritization of opportunities in public-sector AI contexts.
 
 ## Country Priority Distribution
 
@@ -59,7 +59,7 @@ Execution capacity is contingent on both funding availability and absence of str
 
 ## Dataset
 
-The dataset contains structured information about government leads across multiple countries and reflects real B2G pipeline activity aggregated into country-level signals.
+The dataset contains structured information about public-sector engagement activity across multiple countries, aggregated into country-level signals.
 
 - country  
 - stage (outreach, engagement, meeting, proposal)  
@@ -81,7 +81,7 @@ Lead-level data is aggregated to the country level:
 - maximum stage reached  
 - engagement intensity  
 
-This allows moving from individual deals to country-level signals.
+This allows moving from individual interactions to country-level signals.
 
 ### 2. Rule-based readiness model
 
@@ -270,35 +270,9 @@ README.md  Project documentation
 
 ## Data Note
 
-The dataset is derived from real B2G pipeline activity and has been anonymized and transformed for analytical use.
-
-Sensitive and identifying elements have been removed, while preserving the structural characteristics necessary for modeling institutional dynamics.
+The dataset is an analytical reconstruction based on generalized patterns observed across public-sector engagements.  
+It has been anonymized and transformed for modeling purposes and does not represent any specific organization’s operational pipeline.
 
 ## How to Run
 
 Install dependencies:
-
-pip install -r requirements.txt  
-
-Run the truth table:
-
-python src/truth_table.py  
-
-Run counterfactual analysis:
-
-python src/counterfactuals.py  
-
-## Purpose
-
-This project demonstrates:
-
-- translation of qualitative institutional insight into formal logic  
-- clear operationalization of strategic conditions  
-- reproducible rule-based analytical modeling  
-- diagnostic identification of structural constraints  
-
-The project offers a transparent, rule-based framework for analyzing institutional AI readiness.
-
-## Author
-
-Dimitri Suminov
