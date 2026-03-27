@@ -8,7 +8,7 @@ Rule-Based Configurational Approach to National AI Commitment
 This repository presents a rule-based institutional model designed to explain when national-level AI programs reach strategic commitment.  
 Analytical case study based on generalized patterns observed across public-sector AI engagements.
 
-The framework formalizes institutional conditions frequently observed in public-sector AI initiatives and translates them into a transparent, reproducible analytical model implemented in Python.  
+The framework formalizes institutional conditions frequently observed in public-sector AI initiatives and translates them into a transparent, reproducible analytical model.  
 The project focuses on transforming structured engagement signals into an explainable model for prioritization and strategic decision-making.
 
 The focus is institutional feasibility rather than market demand or predictive modeling.
@@ -62,26 +62,32 @@ Execution capacity is contingent on both funding availability and absence of str
 The dataset contains structured information about public-sector engagement activity across multiple countries, aggregated into country-level signals.
 
 - country  
-- stage (outreach, engagement, meeting, proposal)  
+- stage (outreach, engagement, meeting, proposal, won)  
 - stage_order  
-- deal progression indicators (won, is_closed)  
+- won (final stage reached indicator)  
+- is_closed  
 
-Main file:  
-data/clean_dataset.xlsx  
+Main files:
+
+- data/clean_dataset.csv  
+- data/country_rules.csv  
 
 ## Methodology
 
 The analysis is built in two layers:
 
-### 1. Data aggregation
+### 1. Data aggregation (SQL layer)
 
 Lead-level data is aggregated to the country level:
 
 - number of leads  
+- stage distribution  
 - maximum stage reached  
-- engagement intensity  
+- final-stage counts  
 
-This allows moving from individual interactions to country-level signals.
+Implemented in:
+
+- sql/01_country_priority_base.sql  
 
 ### 2. Rule-based readiness model
 
@@ -92,187 +98,177 @@ A structured rule-based layer translates qualitative signals into analytical var
 - Budget_Signal  
 - Blocking_Constraint  
 
-Defined in:  
-data/country_rules.csv  
+Execution capacity:
 
-These variables are used to classify countries into readiness segments.
+EX = 1 if Budget_Signal = 1 AND Blocking_Constraint = 0  
 
-## Classification Logic
+Classification:
 
-The model applies strict necessary-condition reasoning:
+- Level 1 → SA = 0  
+- Level 2 → SA = 1 AND (STR = 0 OR EX = 0)  
+- Level 3 → SA = 1 AND STR = 1 AND EX = 1  
 
-Level 1 → SA = 0  
-Level 2 → SA = 1 AND (STR = 0 OR EX = 0)  
-Level 3 → SA = 1 AND STR = 1 AND EX = 1  
+Priority logic:
 
-Level 2 represents partial readiness where access exists but either strategic alignment or execution capacity is missing.
-
-This structure reflects conjunctural causality:  
-absence of any required condition prevents the highest level of institutional commitment.
-
-## Priority Logic
-
-Final prioritization follows a hierarchical override logic:
-
-- Blocking constraint overrides everything → Delayed  
+- Blocking_Constraint = 1 → Delayed  
 - Level 3 → Focus  
 - Level 2 → Nurture  
-- Level 1 → Low Priority  
+- Else → Low Priority  
 
-This creates a transparent decision framework rather than a black-box model.
+## SQL Analytical Layer
 
-## Output
+The SQL layer provides structured diagnostics and validation.
 
-The model produces a country-level prioritization:
+### Priority Volume
 
-- Focus  
-- Nurture  
-- Delayed  
-- Low Priority  
+- sql/02_priority_volume.sql  
+- Measures distribution of countries across priority segments  
 
-This can be used to:
+### Priority Performance
 
-- guide sales strategy  
-- allocate resources  
-- identify high-potential markets  
+- sql/03_priority_performance.sql  
+- Average progression and stage depth by priority  
+
+### Priority Conversion
+
+- sql/04_priority_conversion.sql  
+
+Final-stage reach rate:
+
+final_stage_rate = won_count / total_leads  
+
+Important:
+
+"won" represents reaching the final stage, not necessarily a successfully closed deal.
+
+Observed results:
+
+- Focus → 0.0183  
+- Nurture → 0.0042  
+- Low Priority → 0  
+- Delayed → 0  
+
+Clear separation between structurally viable and non-viable segments.
+
+### Validation Checks
+
+- sql/05_validation_checks.sql  
+
+Ensures:
+
+- full country coverage  
+- no missing joins  
+- no duplicate rules  
+- classification integrity  
 
 ## Pipeline Priority Analysis
 
-Detailed segmentation of pipeline performance across priority groups.
-
-### Pipeline Progression by Priority Segment
+### Progression
 
 ![Progression](outputs/priority_analysis/progression_by_priority.png)
 
-Average stage reached per segment:
+Average stage reached:
 
 - Focus → 2.55  
 - Nurture → 2.13  
-- Low Priority → 1.78  
-- Delayed → 1.62  
+- Low Priority → ~1.6–1.7  
+- Delayed → ~1.6  
 
-Focus countries reach significantly higher progression compared to Low Priority (+43%), confirming alignment between institutional readiness and pipeline advancement.
+Focus countries show materially deeper pipeline progression.
 
-Nurture shows intermediate progression, while Delayed and Low Priority stall early.
-
-### Pipeline Volume by Priority Segment
+### Volume
 
 ![Volume](outputs/priority_analysis/volume_by_priority.png)
 
-Number of leads per segment:
-
-- Focus → 273  
+- Focus → 273 leads  
 - Nurture → 237  
-- Delayed → 108  
-- Low Priority → 51  
+- Delayed → 102  
+- Low Priority → 57  
 
-Focus and Nurture dominate pipeline volume.
+Pipeline is concentrated in higher-priority segments.
 
-Delayed shows meaningful volume with limited progression, indicating structural bottlenecks rather than lack of engagement.
+### Conversion Interpretation
 
-### Stage Conversion Analysis
+- Focus → reaches final stage consistently  
+- Nurture → occasional progression to final stage  
+- Delayed → structurally blocked at later stages  
+- Low Priority → fails early  
 
-To understand where pipeline progression breaks down, stage-to-stage conversion rates were analyzed.
-
-Key patterns:
-
-- High-priority segments (Focus, Nurture) show consistent conversion across stages  
-- Low Priority shows early drop-off between outreach and engagement  
-- Delayed segments demonstrate stalled conversion at later stages (proposal → won)  
-
-This confirms that pipeline inefficiency is not uniform:
-
-- Low Priority fails at early qualification  
-- Delayed fails at execution and commitment stages  
-
-### Interpretation
-
-Combining progression, volume, and conversion reveals a structural pattern:
-
-- Focus → high progression, strong conversion, high volume → core strategic targets  
-- Nurture → moderate progression and conversion → development potential  
-- Delayed → volume present but blocked at late stages → execution constraints  
-- Low Priority → early drop-off and low progression → structurally weak segment  
-
-Pipeline performance is strongly driven by institutional conditions rather than random variation.
+Pipeline inefficiency is structural, not random.
 
 ## Key Insight
 
 The pipeline is structurally inefficient:
 
-- 84% of countries fall into Low Priority  
+- ~84% of countries fall into Low Priority  
 - These countries generate minimal progression  
-- Most meaningful advancement is concentrated in a small subset of countries  
+- Meaningful advancement is concentrated in a small subset  
 
-This indicates resource dilution across structurally unviable segments rather than lack of pipeline activity.
+This reflects misallocation of effort rather than lack of activity.
 
 ## Methodological Positioning
 
-This is not a predictive ML model and does not rely on regression or scoring techniques.
+This is not a predictive ML model.
 
-Instead, it:
+It:
 
-- applies necessary-condition logic  
-- uses transparent binary institutional signals  
-- explicitly maps conceptual assumptions to operational rules  
-- enables structural diagnostics rather than probabilistic prediction  
+- uses necessary-condition logic  
+- applies binary institutional signals  
+- is fully explainable  
+- supports structural diagnostics  
 
-The approach is structurally closer to institutional analysis and QCA-style reasoning than to additive scoring models.
-
-## Implementation
-
-The repository includes:
-
-- a full truth table covering all possible institutional configurations  
-- a classification script applying the rule-based logic  
-- a counterfactual analysis module identifying binding constraints  
-- reproducible results generated from structured CSV inputs  
-
-The logic is implemented in Python and can be applied to any dataset structured around the defined institutional variables.
+The approach is closer to institutional analysis and QCA than to scoring models.
 
 ## Counterfactual Analysis
 
-Beyond static classification, the model includes a counterfactual layer to identify binding institutional constraints.
+The model evaluates how changes in constraints affect outcomes:
 
-For each case, the framework evaluates:
+- removing blocking constraints  
+- activating budget signals  
+- combined adjustments  
 
-- baseline predicted level  
-- level if blocking constraints were removed  
-- level if budget signals were activated  
-- level if both constraints were resolved  
+Findings:
 
-This allows identification of the specific bottleneck preventing advancement.
+- SA is a hard constraint  
+- Budget is required for execution  
+- Removing governance barriers alone is insufficient without funding  
 
-- Senior Access Constraint  
-  If SA = 0, no other institutional adjustments change the level  
-
-- Budget Constraint  
-  Removing governance barriers does not shift commitment without explicit funding signals  
-
-- Governance Constraint  
-  In some systems, removing structural barriers enables progression  
-
-This demonstrates that national AI commitment is conjunctural rather than additive.  
-Strategic advancement requires joint institutional alignment.
+Strategic commitment requires joint institutional alignment.
 
 ## Repository Structure
 
-data/      Example input dataset (anonymized)  
-src/       Model scripts (classification, truth table, counterfactuals)  
-outputs/   Generated analytical outputs (optional, excluded via .gitignore)  
-README.md  Project documentation  
+- data/ — input datasets (anonymized)  
+- sql/ — SQL analytical layer  
+- src/ — Python model and scripts  
+- outputs/ — charts and analytical outputs  
+- README.md — project documentation  
 
 ## Tech Stack
 
-- Excel (data structuring, pivot analysis)  
-- Python (rule-based modeling, counterfactual analysis)  
-- GitHub (project structure and documentation)  
+- Excel — data structuring  
+- PostgreSQL — analytical SQL layer  
+- Python — rule-based modeling and counterfactual analysis  
+- GitHub — documentation and reproducibility  
 
 ## Data Note
 
 The dataset is an analytical reconstruction based on generalized patterns observed across public-sector engagements.  
-It has been anonymized and transformed for modeling purposes and does not represent any specific organization’s operational pipeline.
+It is anonymized and does not represent any specific organization’s operational pipeline.
 
 ## How to Run
 
 Install dependencies:
+
+pip install -r requirements.txt
+
+Run the model:
+
+python src/model_rules.py
+
+Generate truth table:
+
+python src/truth_table.py
+
+Run counterfactual analysis:
+
+python src/counterfactuals.py
