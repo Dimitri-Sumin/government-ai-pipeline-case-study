@@ -6,12 +6,7 @@ Rule-Based Configurational Approach to National AI Commitment
 ## Overview
 
 Public-sector AI sales cycles are long, resource-intensive, and structurally uneven. Most national markets show surface-level interest in AI adoption but lack the institutional conditions required to move from engagement to strategic commitment. Without a framework to distinguish structurally viable opportunities from those that will stall regardless of effort, pipeline resources get misallocated at scale. This model was built to solve that problem: it formalizes the institutional signals observed across real public-sector AI engagements into a transparent, rule-based classification system that explains why countries progress — or don't.
-This repository presents a rule-based institutional model designed to explain when national-level AI programs reach strategic commitment.  
-Analytical case study based on generalized patterns observed across public-sector AI engagements.
-
-The framework formalizes institutional conditions frequently observed in public-sector AI initiatives and translates them into a transparent, reproducible analytical model.  
-The project focuses on transforming structured engagement signals into an explainable model for prioritization and strategic decision-making.
-
+  
 The focus is institutional feasibility rather than market demand or predictive modeling.
 
 ## Objective
