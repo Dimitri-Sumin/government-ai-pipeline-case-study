@@ -4,10 +4,7 @@ This folder contains the SQL layer used to transform lead-level pipeline data in
 
 ## Structure
 
-- `00_load_data.sql`  
-  Creates tables and loads CSV data into PostgreSQL.
-
-- `01_country_pipeline_base.sql`  
+- `01_country_priority_base.sql`  
   Builds the main country-level analytical table by aggregating leads, joining institutional rule inputs, deriving execution capacity (`ex`), assigning `predicted_level`, and mapping countries into business priority segments.
 
 - `02_priority_volume.sql`  
@@ -32,14 +29,13 @@ This folder contains the SQL layer used to transform lead-level pipeline data in
 
 Run scripts in the following order:
 
-1. `00_load_data.sql`
-2. `01_country_pipeline_base.sql`
-3. `02_priority_volume.sql`
-4. `03_priority_stage_depth.sql`
-5. `04_priority_conversion.sql`
-6. `05_validation_checks.sql`
-7. `06_truth_table.sql`
-8. `07_counterfactuals.sql`
+1. `01_country_priority_base.sql`
+2. `02_priority_volume.sql`
+3. `03_priority_stage_depth.sql`
+4. `04_priority_conversion.sql`
+5. `05_validation_checks.sql`
+6. `06_truth_table.sql`
+7. `07_counterfactuals.sql`
 
 ## Logic Overview
 
@@ -50,18 +46,18 @@ The institutional rule-based model uses four binary input variables:
 - `budget_signal`
 - `blocking_constraint`
 
-Execution capacity is derived as:
+Execution capacity is defined as:
 
 - `ex = 1` if `budget_signal = 1` and `blocking_constraint = 0`
 - otherwise `ex = 0`
 
-Predicted institutional level is assigned as:
+Predicted institutional level:
 
 - `Level 1` if `sa = 0`
 - `Level 2` if `sa = 1` and (`str = 0` or `ex = 0`)
 - `Level 3` if `sa = 1` and `str = 1` and `ex = 1`
 
-Business priority is mapped as:
+Business priority mapping:
 
 - `Delayed` if `blocking_constraint = 1`
 - `Focus` if `predicted_level = 'Level 3'`
@@ -72,6 +68,6 @@ Business priority is mapped as:
 
 - `"won"` represents reaching the final pipeline stage, not necessarily a successfully closed deal.
 - `04_priority_conversion.sql` measures final-stage reach rate, not strict commercial win rate.
-- `06_truth_table.sql` is a full logical enumeration of the model and is useful for transparency and validation.
-- `07_counterfactuals.sql` is used to test how priority-relevant conditions change under alternative institutional assumptions.
-- All queries are written for PostgreSQL.
+- `06_truth_table.sql` provides a complete logical enumeration of the model.
+- `07_counterfactuals.sql` shows how outcomes change under alternative institutional conditions.
+- All queries are designed for PostgreSQL.
