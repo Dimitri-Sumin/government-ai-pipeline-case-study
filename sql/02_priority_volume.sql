@@ -4,7 +4,7 @@ Summarize country distribution by business priority.
 
 Logic:
 Uses the same country-level aggregation and classification pipeline
-as 01_country_priority_base.sql, then groups countries by priority.
+as 01_country_pipeline_base.sql, then groups countries by priority.
 
 Output:
 One row per priority segment with:
@@ -57,7 +57,7 @@ classified AS (
             WHEN sa = 1 AND (str = 0 OR ex = 0) THEN 'Level 2'
             WHEN sa = 1 AND str = 1 AND ex = 1 THEN 'Level 3'
             ELSE 'Unclassified'
-        END AS level
+        END AS predicted_level
     FROM derived
 ),
 
@@ -66,9 +66,10 @@ final AS (
         *,
         CASE
             WHEN blocking_constraint = 1 THEN 'Delayed'
-            WHEN level = 'Level 3' THEN 'Focus'
-            WHEN level = 'Level 2' THEN 'Nurture'
-            ELSE 'Low Priority'
+            WHEN predicted_level = 'Level 3' THEN 'Focus'
+            WHEN predicted_level = 'Level 2' THEN 'Nurture'
+            WHEN predicted_level = 'Level 1' THEN 'Low Priority'
+            ELSE 'Unclassified'
         END AS priority
     FROM classified
 )
