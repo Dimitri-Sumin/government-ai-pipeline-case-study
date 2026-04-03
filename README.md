@@ -13,7 +13,6 @@ This model formalizes institutional signals observed across public-sector AI eng
 
 The focus is institutional feasibility rather than market demand or predictive modeling.
 
----
 
 ## Objective
 
@@ -21,7 +20,6 @@ What institutional conditions are necessary for a country to reach strategic com
 
 To design a rule-based analytical framework that evaluates country-level AI readiness and supports prioritization of opportunities in public-sector AI contexts.
 
----
 
 ## Country Priority Distribution
 
@@ -36,7 +34,6 @@ The distribution is heavily skewed toward the Low priority segment:
 
 This indicates a structurally imbalanced pipeline where most countries do not meet the institutional conditions required for progression.
 
----
 
 ## Conceptual Framework
 
@@ -61,7 +58,6 @@ EX = 1 if Budget_Signal = 1 AND Blocking_Constraint = 0
 Else EX = 0
 
 
----
 
 ## Dataset
 
@@ -80,7 +76,6 @@ Files:
 - `data/clean_dataset.csv`  
 - `data/country_rules.csv`  
 
----
 
 ## Methodology
 
@@ -97,7 +92,6 @@ Implemented in:
 
 - `sql/01_country_priority_base.sql`
 
----
 
 ### 2. Rule-based readiness model
 
@@ -121,7 +115,6 @@ Priority mapping:
 - Level 2 → Nurture  
 - Else → Low Priority  
 
----
 
 ## SQL Analytical Layer
 
@@ -156,7 +149,6 @@ Ensures:
 - no duplicate rule entries  
 - classification consistency  
 
----
 
 ## Model Transparency
 
@@ -167,7 +159,6 @@ Ensures:
 Enumerates all possible combinations of institutional conditions and resulting levels.  
 Ensures full logical coverage of the model.
 
----
 
 ### Counterfactual Analysis
 
@@ -187,7 +178,6 @@ Findings:
 
 Strategic commitment requires joint institutional alignment.
 
----
 
 ## Pipeline Priority Analysis
 
@@ -199,7 +189,6 @@ Strategic commitment requires joint institutional alignment.
 - Nurture → moderate  
 - Delayed / Low → early stagnation  
 
----
 
 ### Volume
 
@@ -208,7 +197,6 @@ Strategic commitment requires joint institutional alignment.
 - Focus and Nurture dominate pipeline volume  
 - Delayed remains significant → inefficiency signal  
 
----
 
 ### Interpretation
 
@@ -219,7 +207,6 @@ Strategic commitment requires joint institutional alignment.
 
 Pipeline inefficiency is structural, not random.
 
----
 
 ## Key Insight
 
@@ -229,7 +216,6 @@ Pipeline inefficiency is structural, not random.
 
 This reflects systemic misallocation of effort.
 
----
 
 ## Methodological Positioning
 
@@ -244,7 +230,6 @@ It:
 
 Closer to institutional analysis and QCA than to scoring models.
 
----
 
 ## Repository Structure
 
@@ -253,7 +238,6 @@ Closer to institutional analysis and QCA than to scoring models.
 - `outputs/` — charts  
 - `README.md` — documentation  
 
----
 
 ## Tech Stack
 
@@ -262,7 +246,6 @@ Closer to institutional analysis and QCA than to scoring models.
 - Excel — initial structuring  
 - GitHub — documentation  
 
----
 
 ## Data Note
 
