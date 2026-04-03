@@ -7,6 +7,7 @@ Checks:
 2. Null values after joining country-level data with rules
 3. Unexpected classifications
 4. Duplicate countries in country_rules
+5. Invalid values in rule fields (not 0/1)
 */
 
 -- 1. Countries present in leads but missing from country_rules
@@ -84,12 +85,12 @@ classified AS (
             WHEN sa = 1 AND (str = 0 OR ex = 0) THEN 'Level 2'
             WHEN sa = 1 AND str = 1 AND ex = 1 THEN 'Level 3'
             ELSE 'Unclassified'
-        END AS level
+        END AS predicted_level
     FROM derived
 )
 SELECT *
 FROM classified
-WHERE level = 'Unclassified'
+WHERE predicted_level = 'Unclassified'
 ORDER BY country;
 
 
@@ -101,3 +102,12 @@ FROM country_rules
 GROUP BY country
 HAVING COUNT(*) > 1
 ORDER BY row_count DESC, country;
+
+
+-- 5. Invalid values in rule fields (not 0/1)
+SELECT *
+FROM country_rules
+WHERE sa NOT IN (0,1)
+   OR str NOT IN (0,1)
+   OR budget_signal NOT IN (0,1)
+   OR blocking_constraint NOT IN (0,1);
