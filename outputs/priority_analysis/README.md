@@ -1,10 +1,28 @@
 ## Priority-Based Pipeline Analysis
 
-This section presents a segmentation of the government AI pipeline based on institutional readiness.
+This analysis presents a segmentation of the government AI pipeline based on a rule-based institutional readiness model.
 
-The analysis compares:
-- progression depth (how far countries move in the pipeline)
-- pipeline volume (how many leads exist per segment)
+The model uses four binary signals:
+
+- `sa`
+- `str`
+- `budget_signal`
+- `blocking_constraint`
+
+Execution capacity (`ex`) and institutional level are derived using deterministic rules implemented in SQL.
+
+Countries are then grouped into business priority segments:
+
+- Focus
+- Nurture
+- Delayed
+- Low Priority
+
+The full analytical logic is implemented in the SQL layer (`/sql` folder), including:
+- classification model
+- validation checks
+- full truth table of the model
+- counterfactual scenario analysis
 
 ---
 
